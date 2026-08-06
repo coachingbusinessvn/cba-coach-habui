@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>So sánh 3 phương án design — CoachHaBui</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Be Vietnam Pro',sans-serif;background:#181F1A;color:#EDE9DC;line-height:1.65;font-weight:300}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px}
+  h1{font-size:clamp(24px,4vw,36px);font-weight:600;margin:0 0 8px}
+  .sub{color:#93A896;margin:0 0 40px;font-size:15px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:44px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .opt{background:#212B23;border:1px solid rgba(233,206,130,.18);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .opt .preview{height:170px;position:relative;display:flex;align-items:center;justify-content:center;font-size:13px}
+  .opt .body{padding:22px;flex:1;display:flex;flex-direction:column;gap:10px}
+  .opt h2{font-size:19px;font-weight:600;margin:0}
+  .opt .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C4A253}
+  .opt p{font-size:13.5px;color:#B9C2B4;margin:0}
+  .swatches{display:flex;gap:6px}
+  .sw{width:26px;height:26px;border-radius:6px;border:1px solid rgba(255,255,255,.15)}
+  .opt a.open{display:inline-block;margin-top:auto;background:#E9CE82;color:#1B2A1F;font-weight:600;font-size:13.5px;padding:11px 20px;border-radius:999px;text-decoration:none;text-align:center}
+  .opt a.open:hover{background:#F0DFA6}
+  /* mini previews */
+  .prevA{background:linear-gradient(158deg,#3A4A3C,#26332A 60%,#F4EFE4 60.2%)}
+  .prevA .arch{position:absolute;right:26px;top:22px;width:70px;height:110px;border-radius:60px 60px 8px 8px;background:#E4C878;opacity:.9}
+  .prevA .t{position:absolute;left:22px;top:38px;font-family:Georgia,serif;color:#F1EEE1;font-size:16px;max-width:130px;line-height:1.25}
+  .prevB{background:#0C1710}
+  .prevB .halo{position:absolute;inset:0;margin:auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(233,206,130,.5),transparent 65%)}
+  .prevB .t{position:relative;font-family:Georgia,serif;color:#EDE9DC;font-size:16px;text-align:center}
+  .prevB .t em{color:#E9CE82}
+  .prevC{background:#F5F6EE}
+  .prevC .door{position:absolute;top:24px;width:64px;height:120px;border-radius:52px 52px 8px 8px}
+  .prevC .d1{left:calc(50% - 72px);background:#20362A}
+  .prevC .d2{left:calc(50% + 8px);background:linear-gradient(175deg,#E8DDBB,#DFD3A8)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:12px 14px;border:1px solid rgba(233,206,130,.15);text-align:left;vertical-align:top}
+  th{background:#212B23;font-weight:600;font-size:12.5px;letter-spacing:.06em}
+  td:first-child{color:#C4A253;white-space:nowrap;font-weight:500}
+  .note{margin-top:28px;background:#212B23;border-left:3px solid #C4A253;border-radius:0 10px 10px 0;padding:16px 20px;font-size:13.5px;color:#B9C2B4}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Phương án design — CoachHaBui</h1>
+  <p class="sub">Cùng ràng buộc: xanh lá đậm (dark) chủ đạo + vàng đất accent · IA 2 luồng khách hàng đã chốt · số liệu theo PDF. <strong style="color:#E9CE82">Hướng đã chọn (06/08/2026): B — Rừng Đêm, đan xen section sáng kem vàng nhẹ.</strong> Bản lai B+C đã bị loại.</p>
+
+  <div class="grid">
+    <div class="opt">
+      <div class="preview prevA"><div class="t">Hành trình tìm về <i style="color:#E9CE82">Nguồn sáng</i></div><div class="arch"></div></div>
+      <div class="body">
+        <div class="tag">Phương án A · bản nháp của bạn</div>
+        <h2>Kem &amp; Vòm — Warm Sanctuary</h2>
+        <p>Nền kem ấm, hero xanh đậm, khung ảnh vòm, chữ script điểm xuyết. Ấm áp, mềm mại, nữ tính. Đã có 4 trang (Home, Về tôi, Chuyển Hóa Tâm, Inner Gym).</p>
+        <div class="swatches"><div class="sw" style="background:#26332A"></div><div class="sw" style="background:#F4EFE4"></div><div class="sw" style="background:#E4C878"></div><div class="sw" style="background:#C4A253"></div><div class="sw" style="background:#E3E9D6"></div></div>
+        <p style="font-size:12.5px">Font: Cormorant Garamond + Dancing Script + Be Vietnam Pro</p>
+        <a class="open" href="A-home.html">Mở bản xem thử A</a>
+      </div>
+    </div>
+
+    <div class="opt">
+      <div class="preview prevB"><div class="halo"></div><div class="t">Luôn có <em>ánh sáng</em><br>bên trong bạn</div></div>
+      <div class="body">
+        <div class="tag" style="color:#E9CE82">★ Phương án B · ĐÃ CHỌN</div>
+        <h2>Rừng Đêm — đan xen section sáng</h2>
+        <p>Dark-first: hero, số liệu, quote, CTA trên nền xanh đen thẫm với quầng sáng vàng "thở"; <strong>đan xen các section sáng kem vàng nhẹ</strong> (2 luồng khách hàng, chương trình nổi bật) tạo nhịp tối–sáng dễ đọc, ấm áp mà vẫn giữ chiều sâu.</p>
+        <div class="swatches"><div class="sw" style="background:#0C1710"></div><div class="sw" style="background:#12211A"></div><div class="sw" style="background:#F6F0E1"></div><div class="sw" style="background:#E9CE82"></div><div class="sw" style="background:#C4A253"></div></div>
+        <p style="font-size:12.5px">Font: Fraunces + Be Vietnam Pro (bỏ chữ script)</p>
+        <a class="open" href="B-home.html">Mở bản xem thử B</a>
+      </div>
+    </div>
+
+    <div class="opt">
+      <div class="preview prevC"><div class="door d1"></div><div class="door d2"></div></div>
+      <div class="body">
+        <div class="tag">Phương án C · mới</div>
+        <h2>Hai Cánh Cửa — Vườn Sáng</h2>
+        <p>Nền sáng sage, tối giản biên tập. Signature: hero là 2 cánh cửa vòm — cửa xanh đậm "Dành cho bạn", cửa vàng đất "Dành cho Coach" — thể hiện trực tiếp IA 2 luồng đã chốt.</p>
+        <div class="swatches"><div class="sw" style="background:#F5F6EE"></div><div class="sw" style="background:#20362A"></div><div class="sw" style="background:#A97F2C"></div><div class="sw" style="background:#E8DDBB"></div><div class="sw" style="background:#ECEFE0"></div></div>
+        <p style="font-size:12.5px">Font: Lora + Be Vietnam Pro (bỏ chữ script)</p>
+        <a class="open" href="C-home.html">Mở bản xem thử C</a>
+      </div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th></th><th>A — Kem &amp; Vòm</th><th>B — Rừng Đêm</th><th>C — Hai Cánh Cửa</th></tr>
+    <tr><td>Cảm giác</td><td>Ấm áp, mềm mại, gần gũi</td><td>Tĩnh lặng, chiều sâu, cao cấp</td><td>Trong trẻo, rõ ràng, hiện đại</td></tr>
+    <tr><td>Đúng brief "xanh đậm hướng dark"</td><td>Một phần — dark chỉ ở hero/footer, thân trang nền kem</td><td>Đúng nhất — dark toàn trang</td><td>Một phần — dark nằm ở các khối lớn trên nền sáng</td></tr>
+    <tr><td>IA 2 luồng</td><td>Chưa có (cần sửa section Khoá học)</td><td>Có — 2 panel "Hai con đường"</td><td>Có — signature 2 cánh cửa ngay hero</td></tr>
+    <tr><td>Rủi ro</td><td>Phổ biến, dễ giống các site coaching khác</td><td>Dark toàn trang có thể nặng khi đọc bài dài (blog cần biến thể nền sáng)</td><td>Ít "ấm" hơn A; cần ảnh đẹp cho 2 cửa</td></tr>
+    <tr><td>Tiến độ</td><td>Đã có 4 trang — nhanh nhất</td><td>Làm lại từ đầu</td><td>Làm lại từ đầu</td></tr>
+    <tr><td>Có thể lai ghép</td><td colspan="3">A + B: giữ layout A nhưng chuyển tông dark của B cho các section chính · A + C: giữ tông A, thêm "2 cánh cửa" thay section Khoá học</td></tr>
+  </table>
+
+  <div class="note"><strong>Gợi ý của tôi:</strong> nếu ưu tiên đúng yêu cầu "màu dark" của khách và sự khác biệt → chọn <strong>B</strong> (blog/bài dài dùng biến thể nền sáng). Nếu ưu tiên tốc độ và sự an toàn → giữ <strong>A</strong> và ghép thêm "2 cánh cửa" của C vào section Khoá học. Hoàn toàn có thể chốt lai ghép.</div>
+</div>
+</body>
+</html>

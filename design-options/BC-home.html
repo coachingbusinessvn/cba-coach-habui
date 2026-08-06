@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phương án B+C — Hai Cánh Cửa trong Rừng Đêm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0C1710; --panel:#12211A; --raised:#1B3024;
+    --line:rgba(196,162,83,.28); --line-soft:rgba(233,206,130,.14);
+    --gold:#E9CE82; --gold-deep:#C4A253; --sand:#E8DDBB;
+    --ink:#EDE9DC; --muted:#93A896; --muted-2:#6E8474;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--gold);text-decoration:none}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+  ::selection{background:var(--gold-deep);color:#0C1710}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+
+  /* nav */
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:26px 0;border-bottom:1px solid var(--line-soft)}
+  .nav-links{display:flex;gap:clamp(14px,2.5vw,30px);font-size:13.5px;color:var(--muted);flex-wrap:wrap}
+  .nav-links a{color:inherit}
+  .nav-links a:hover{color:var(--gold)}
+  .btn{display:inline-block;background:var(--gold);color:#1B2A1F;font-weight:600;font-size:14px;padding:13px 26px;border-radius:999px;transition:transform .25s ease, box-shadow .25s ease}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(233,206,130,.25);color:#1B2A1F}
+  .btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--line)}
+  .logo{height:44px;width:auto;display:block;filter:brightness(1.15)}
+
+  /* hero — text + halo, doors carry the imagery */
+  .hero{position:relative;text-align:center;padding:clamp(56px,8vw,96px) 0 clamp(20px,3vw,32px);overflow:visible}
+  .halo{position:absolute;left:50%;top:60%;transform:translate(-50%,-50%);width:min(720px,120vw);aspect-ratio:1;border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle, rgba(233,206,130,.26) 0%, rgba(233,206,130,.08) 34%, transparent 62%);
+    animation:breathe 7s ease-in-out infinite}
+  @keyframes breathe{0%,100%{opacity:.75;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.06)}}
+  @media (prefers-reduced-motion: reduce){.halo{animation:none}.door,.btn{transition:none}.door:hover{transform:none}}
+  .hero .eyebrow{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:24px}
+  .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(38px,6vw,72px);line-height:1.08;margin:0 auto 18px;max-width:18ch;position:relative}
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--gold)}
+  .hero p{font-size:16.5px;color:var(--muted);max-width:54ch;margin:0 auto;position:relative}
+
+  /* the two lit doors — signature (C's doors in B's night forest) */
+  .doors{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.5vw,28px);padding:clamp(40px,5vw,60px) 0 clamp(48px,6vw,72px);position:relative}
+  .door{position:relative;border-radius:300px 300px 18px 18px;overflow:hidden;min-height:540px;display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,3.5vw,44px);
+    border:1px solid var(--line);box-shadow:0 0 0 8px rgba(233,206,130,.04), 0 30px 70px rgba(0,0,0,.45);
+    transition:transform .3s ease, box-shadow .3s ease}
+  .door:hover{transform:translateY(-6px);box-shadow:0 0 0 8px rgba(233,206,130,.08), 0 40px 90px rgba(0,0,0,.55)}
+  .door.you{background:var(--raised);color:var(--ink)}
+  .door.you::before{content:"";position:absolute;inset:0;background:url('https://www.coachhabui.com/wp-content/uploads/2025/07/DucHoang-0396616967-08943-1024x683-1-768x512.jpeg') center/cover;opacity:.5}
+  .door.you::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,23,16,.05) 25%,rgba(12,23,16,.94) 76%)}
+  .door.coach{background:linear-gradient(175deg,#E8DDBB,#D9C98F);color:#2A2410}
+  .door.coach::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 60% at 50% 0%,rgba(233,206,130,.5),transparent 55%)}
+  .door>*{position:relative;z-index:1}
+  .door .k{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px}
+  .door.you .k{color:var(--gold)}
+  .door.coach .k{color:#8F6A22}
+  .door h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:0 0 10px}
+  .door p{font-size:15px;line-height:1.65;margin:0 0 20px;max-width:42ch}
+  .door.you p{color:#B9C6B6}
+  .door.coach p{color:#5C5232}
+  .door ul{list-style:none;margin:0 0 26px;padding:0;font-size:14.5px}
+  .door li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-top:1px solid currentColor;align-items:baseline}
+  .door.you li{border-color:rgba(233,206,130,.18)}
+  .door.coach li{border-color:rgba(90,74,34,.25)}
+  .door li .meta{font-size:12px;opacity:.75;white-space:nowrap}
+  .door .btn{align-self:flex-start}
+  .door.coach .btn{background:#20362A;color:var(--sand)}
+
+  /* stats hairline (from B) */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line-soft);border:1px solid var(--line-soft);margin-bottom:clamp(56px,7vw,88px)}
+  .stat{background:var(--panel);text-align:center;padding:36px 20px}
+  .stat .n{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(32px,3.8vw,48px);color:var(--gold);line-height:1}
+  .stat .l{font-size:13px;color:var(--muted);margin-top:10px}
+
+  /* quote (from B) */
+  .quote{text-align:center;padding:0 0 clamp(64px,8vw,96px);position:relative}
+  .quote blockquote{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:clamp(21px,2.8vw,30px);line-height:1.5;max-width:52ch;margin:0 auto 20px}
+  .quote cite{font-style:normal;font-size:13px;letter-spacing:.14em;color:var(--muted-2)}
+
+  /* CTA */
+  .cta{text-align:center;border-top:1px solid var(--line-soft);background:linear-gradient(180deg,var(--panel),var(--bg));padding:clamp(60px,8vw,90px) 0}
+  .cta h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(28px,3.8vw,42px);margin:0 0 14px}
+  .cta p{color:var(--muted);max-width:50ch;margin:0 auto 32px;font-size:15.5px}
+
+  footer{padding:52px 0 36px;color:var(--muted-2);font-size:13.5px;border-top:1px solid var(--line-soft)}
+  .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .foot .links{display:flex;gap:20px;flex-wrap:wrap}
+  .foot a{color:var(--muted)}
+
+  @media (max-width:860px){
+    .doors{grid-template-columns:1fr}
+    .door{min-height:460px;border-radius:150px 150px 16px 16px}
+    .stats{grid-template-columns:1fr}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <div class="nav-inner">
+    <img class="logo" src="https://www.coachhabui.com/wp-content/uploads/2025/07/cropped-cropped-cropped-6bdfc347-79d8-4640-b348-29b597099cb7-removebg-preview.png" alt="Coach Hà Bùi">
+    <div class="nav-links">
+      <a href="#">Về tôi</a><a href="#">Dành cho bạn</a><a href="#">Dành cho Coach</a><a href="#">Podcast</a><a href="#">Blog</a><a href="#">Tài liệu</a>
+    </div>
+    <a class="btn" href="#">Đặt lịch khai vấn</a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="halo" aria-hidden="true"></div>
+  <div class="eyebrow">A journey to your Inner Light</div>
+  <h1>Luôn có <em>ánh sáng</em> bên trong bạn</h1>
+  <p>Ánh sáng của Trí Huệ và Yêu thương. Dù bạn đang tìm lại chính mình, hay là một coach muốn vững nghề — luôn có một cánh cửa đang sáng đèn chờ bạn.</p>
+</header>
+
+<section class="doors wrap" aria-label="Hai hướng đồng hành">
+  <a class="door you" href="#">
+    <div class="k">Dành cho bạn</div>
+    <h2>Chuyển hoá từ bên trong</h2>
+    <p>Tìm lại kết nối với chính mình — bình an, tự do nội tại và một đời sống tỉnh thức.</p>
+    <ul>
+      <li><span>Về Với Mình · Retreat 3N2Đ</span><span class="meta">17.500.000đ · 5 chỗ</span></li>
+      <li><span>Chuyển Hóa Tâm · Coaching 1-1</span><span class="meta">3 tháng</span></li>
+      <li><span>Inner Gym 21 &amp; 31</span><span class="meta">Miễn phí</span></li>
+    </ul>
+    <span class="btn">Bước vào →</span>
+  </a>
+  <a class="door coach" href="#">
+    <div class="k">Dành cho Coach</div>
+    <h2>Vững nghề — vững mình</h2>
+    <p>Mài giũa kỹ năng, nâng nội lực và kiến tạo phong cách khai vấn không thể sao chép.</p>
+    <ul>
+      <li><span>CoachVenture Empowering · 1-1</span><span class="meta">12 tháng · 24 phiên</span></li>
+      <li><span>Deep-Dive Coach Training</span><span class="meta">6 tháng · 32.700.000đ</span></li>
+      <li><span>CoachVenture Circle · Supervision</span><span class="meta">Nhóm · 4 tháng</span></li>
+    </ul>
+    <span class="btn">Bước vào →</span>
+  </a>
+</section>
+
+<section class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">ICF PCC</div><div class="l">Professional Certified Coach · Coach Supervisor (Barefoot, UK)</div></div>
+    <div class="stat"><div class="n">16 năm</div><div class="l">kinh nghiệm đào tạo &amp; dẫn giảng</div></div>
+    <div class="stat"><div class="n">1.000+</div><div class="l">giờ coaching · hàng trăm giờ supervision</div></div>
+  </div>
+</section>
+
+<section class="quote wrap">
+  <blockquote>&ldquo;Tôi rơi vào khủng hoảng, ngột ngạt và mất định hướng. Nhờ Coach Hà Bùi, tôi đã được giải phóng và chuyển hóa — và tôi tin chắc bạn cũng sẽ.&rdquo;</blockquote>
+  <cite>— PHAN THỊ HOÀNG MY</cite>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Sẵn sàng thắp lại ngọn đèn bên trong?</h2>
+    <p>Bắt đầu bằng một buổi kết nối miễn phí — cùng lắng nghe và tìm hướng đi phù hợp nhất cho bạn.</p>
+    <a class="btn" href="#">Đặt lịch khai vấn</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div class="foot">
+    <span>© 2026 Coach Hà Bùi — A journey to your Inner Light</span>
+    <div class="links"><a href="#">Facebook</a><a href="#">Spotify</a><a href="#">LinkedIn</a><a href="#">YouTube</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
