@@ -10,7 +10,7 @@
 | # | Việc | Người quyết |
 |---|---|---|
 | 0.1 | ✅ **ĐÃ CHỐT (06/08/2026): Phương án B — Rừng Đêm, đan xen section sáng kem vàng nhẹ** (nhịp tối–sáng: hero/số liệu/quote/CTA dark · 2 luồng/chương trình trên nền kem). Bản B+C bị loại. Xem `design-options/B-home.html` | ✔ Xong |
-| 0.2 | Chốt email chính thức: `coachhabui@gmail.com` vs `contact@coachhabui.com` | Khách hàng |
+| 0.2 | ✅ **ĐÃ CHỐT (06/08/2026): `coachhabui@gmail.com`** (đã điền vào footer + trang Liên hệ). Cũng chốt **16 năm** kinh nghiệm đào tạo (PDF Deep-Dive) thay vì 15 năm (PDF CoachVenture) | ✔ Xong |
 | 0.3 | Bổ sung giá + nội dung: **Chuyển Hóa Tâm** (giá, số phiên), **CoachVenture Circle** (giá, lịch), lịch khai giảng 2026 các khoá | Khách hàng |
 | 0.4 | Đích của nút "Đặt lịch khai vấn" (Calendly? Google Form? Zalo?) | Khách hàng |
 | 0.5 | Thu thập ảnh chất lượng cao (chân dung, retreat, lớp học) + 3 file PDF lead magnet + logo gốc | Khách hàng |
@@ -41,9 +41,9 @@ Thứ tự ưu tiên (trang có đủ nội dung nhất làm trước):
 | # | Trang | File | Ghi chú |
 |---|---|---|---|
 | 2.1 | Home (IA 2 luồng) | `site/index.html` | ✅ |
-| 2.2 | Về Với Mình | `site/ve-voi-minh.html` | ✅ đủ nội dung PDF 2026 |
-| 2.3 | CoachVenture Empowering | `site/coachventure-empowering.html` | ✅ kèm FAQ 5 câu |
-| 2.4 | Deep-Dive Coach Training | `site/deep-dive.html` | ✅ lịch khai giảng [CHỜ XÁC NHẬN] |
+| 2.2 | Về Với Mình | `site/ve-voi-minh.html` | ✅ đủ nội dung PDF 2026 (thiếu ngày tổ chức — PDF không có) |
+| 2.3 | CoachVenture Empowering | `site/coachventure-empowering.html` | ✅ FAQ 5 câu + "Lợi ích" 6 mục + block 4 vai trò của Hà (bổ sung 06/08) |
+| 2.4 | Deep-Dive Coach Training | `site/deep-dive.html` | ✅ + section Mục tiêu + "Phát triển toàn diện" + hồ sơ trainer (bổ sung 06/08); lịch khai giảng [CHỜ XÁC NHẬN] |
 | 2.5 | Về tôi | `site/ve-toi.html` | ✅ 4 vai trò, số liệu PDF |
 | 2.6 | Inner Gym | `site/inner-gym.html` | ✅ 7 nguyên tắc + 6 lưu ý |
 | 2.7 | Chuyển Hóa Tâm | `site/chuyen-hoa-tam.html` | ✅ giá [CHỜ XÁC NHẬN] |
